@@ -4,6 +4,8 @@
   "description": "A book component using vanilla JavaScript",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack --mode=development --progress --colors --watch",
+    "prod": "webpack --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,10 +19,19 @@
     "js",
     "javascript"
   ],
-  "author": "Adrian Parr",
-  "license": "ISC",
+  "author": "Adrian Parr <adrianparr@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/adrianparr/book-component-js/issues"
   },
-  "homepage": "https://github.com/adrianparr/book-component-js#readme"
+  "homepage": "https://github.com/adrianparr/book-component-js#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.6.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "wepback": "^1.0.0"
+  },
+  "dependencies": {
+    "webpack": "^4.29.0"
+  }
 }
