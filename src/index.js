@@ -11,8 +11,8 @@
  */
 
 
-import {AlertBox} from './alert-box/alert-box';
-import writeText from './write-text/write-text';
+import {AlertBox} from './js/alert-box/alert-box';
+import writeText from './js/write-text/write-text';
 
 const alertUser = new AlertBox();
 
