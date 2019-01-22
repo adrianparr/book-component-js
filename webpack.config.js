@@ -1,6 +1,9 @@
 const path = require('path');
+// const webpack = require("webpack");
+// const autoprefixer = require("autoprefixer");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/app.js',
@@ -11,9 +14,19 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {}
+          },
+          "css-loader"
+        ]
       }
+      // {
+      //   test: /\.scss$/,
+      //   use: ['style-loader', 'css-loader', 'sass-loader']
+      // }
     ]
   },
   plugins: [
@@ -38,6 +51,16 @@ module.exports = {
         useShortDoctype: true
       },
       hash: true
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css'
     })
+    // new webpack.LoaderOptionsPlugin({
+    //   options: {
+    //     postcss: [
+    //       autoprefixer()
+    //     ]
+    //   }
+    // })
   ]
 };

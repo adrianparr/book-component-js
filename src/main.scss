@@ -1,3 +1,9 @@
+$color-blue: blue;
+
+@mixin autoprefixer-test {
+  user-select: none;
+}
+
 html {
   box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif;
@@ -12,7 +18,9 @@ html {
 
 body {
   font-size: 1.6rem;
-  .intro {
-    color: red;
-  }
+}
+
+.autoprefixer-test {
+  @include autoprefixer-test;
+  color: $color-blue;
 }
