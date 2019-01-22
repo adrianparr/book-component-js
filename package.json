@@ -1,0 +1,26 @@
+{
+  "name": "book-component-js",
+  "version": "1.0.0",
+  "description": "A book component using vanilla JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://adrianparr@github.com/adrianparr/book-component-js.git"
+  },
+  "keywords": [
+    "book",
+    "component",
+    "vanilla",
+    "js",
+    "javascript"
+  ],
+  "author": "Adrian Parr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adrianparr/book-component-js/issues"
+  },
+  "homepage": "https://github.com/adrianparr/book-component-js#readme"
+}
