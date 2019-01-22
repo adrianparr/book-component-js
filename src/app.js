@@ -15,7 +15,7 @@ import {AlertBox} from './js/alert-box/alert-box';
 import writeText from './js/write-text/write-text';
 
 const alertUser = new AlertBox();
-
+const css = require('./app.scss');
 
 /**
  * This is where the magic happens.
