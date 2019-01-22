@@ -50,7 +50,7 @@ module.exports = {
         removeStyleLinkTypeAttributes: true,
         useShortDoctype: true
       },
-      hash: true
+      hash: false
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css'
