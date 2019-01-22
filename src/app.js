@@ -13,7 +13,7 @@
 
 import {AlertBox} from './js/alert-box/alert-box';
 import writeText from './js/write-text/write-text';
-import './main.css'
+import './scss/main.scss'
 
 const alertUser = new AlertBox();
 

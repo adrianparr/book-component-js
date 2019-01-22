@@ -1,0 +1,53 @@
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-weight: $regular;
+$base-font-size: 10px;
+$base-line-height: 1.4;
+
+// Fixed Font
+$fixed-font-family: monospace;
+$fixed-font-size: 85%;
+$fixed-line-height: $base-line-height;
+
+// Headings
+$header-font-weight: $bold;
+
+
+
+
+
+
+$color-primary: orange;
+
+@mixin autoprefixer-test {
+  user-select: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: $color-primary;
+}
+
+.autoprefixer-test {
+  @include autoprefixer-test;
+  
+}

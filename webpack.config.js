@@ -9,7 +9,8 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -22,11 +23,19 @@ module.exports = {
           },
           "css-loader"
         ]
+      },
+      {
+        test: /\.sass$|\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {},
+          },
+          { loader: 'postcss-loader' },
+          { loader: 'sass-loader' }
+        ],
       }
-      // {
-      //   test: /\.scss$/,
-      //   use: ['style-loader', 'css-loader', 'sass-loader']
-      // }
     ]
   },
   plugins: [
@@ -55,12 +64,5 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css'
     })
-    // new webpack.LoaderOptionsPlugin({
-    //   options: {
-    //     postcss: [
-    //       autoprefixer()
-    //     ]
-    //   }
-    // })
   ]
 };
