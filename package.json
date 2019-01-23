@@ -4,8 +4,9 @@
   "description": "A book component using vanilla JavaScript",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode=development --watch",
-    "prod": "webpack --mode=production",
+    "dev": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

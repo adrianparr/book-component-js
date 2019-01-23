@@ -30,10 +30,19 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: {},
+            options: {
+              sourceMap: true
+            }
           },
-          { loader: 'postcss-loader' },
-          { loader: 'sass-loader' }
+          {
+            loader: 'postcss-loader'
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
         ],
       }
     ]
@@ -62,7 +71,8 @@ module.exports = {
       hash: false
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
+      filename: '[name].css',
+      chunkFilename: "[id].css"
     })
   ]
 };
